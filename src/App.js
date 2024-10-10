@@ -5,7 +5,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+         <label>
+            Count
+          </label>
+        <p>0</p>
+        </div>
+        <div className='block'>
+        <btn  className = "btn">+</btn>
+        <btn className = "btn">-</btn>
+        <btn className = "btn">Reset</btn>
+        </div>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -15,7 +26,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React-Redux
         </a>
       </header>
     </div>
