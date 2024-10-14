@@ -1,5 +1,7 @@
 import { createStore } from "redux";
 
+import {DECREMENT, INCREMENT, RESET} from './consnant';
+
 const counter = (state = 0, action) => {
   switch (action.type) {
     case "INCREMENT": {
@@ -20,6 +22,6 @@ const counter = (state = 0, action) => {
 export const store = createStore(counter);
 
 // actions
-export const increment = { type: "INCREMENT" };
-export const decrement = { type: "DECREMENT" };
-export const reset = { type: "RESET" };
+export const increment = { type: INCREMENT };
+export const decrement = { type: DECREMENT };
+export const reset = { type: RESET };
