@@ -1,9 +1,9 @@
-import { ADD_POSITIONS } from "./cards-actions";
+import { ADD_CARDS } from "./cards-actions";
 
-export const positionsReduser = (state = [], actions)=>{
+export const cardsReduser = (state = [], actions)=>{
    switch (actions.type) {
-      case ADD_POSITIONS: {
-         return actions.positions;
+      case ADD_CARDS: {
+         return actions.cards;
       }
    
       default:{

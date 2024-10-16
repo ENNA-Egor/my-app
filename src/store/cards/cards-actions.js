@@ -1,6 +1,6 @@
-export const ADD_POSITIONS = 'ADD_POSITIONS';
+export const ADD_CARDS = 'ADD_CARDS';
 
 export const addPositions = (positions) => ({
-  type: ADD_POSITIONS,
-  positions,
+  type: ADD_CARDS,
+  cards,
 })
