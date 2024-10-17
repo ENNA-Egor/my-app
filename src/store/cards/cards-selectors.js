@@ -5,6 +5,6 @@ export const selectVisibleCards = (state, filers= []) => {
 
     return state.cards.filers (card => {
         const cardFilters = [].concat(card.role, card.level, ...card.languages, ...card.tools);
-        return filers.every(filer => cardFilters.includes(filer))
+        return filers.every(filer => cardFilters.includes(filers))
     })
 }
