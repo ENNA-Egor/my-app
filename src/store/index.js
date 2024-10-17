@@ -1,8 +1,8 @@
-import {createStore} from 'redux';
+import {configureStore} from '@reduxjs/toolkit';
 
-import {rootReduser} from './filters';
+import {rootReduser} from './root-reduser';
 
-const store = createStore (
+const store = configureStore (
     rootReduser,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
