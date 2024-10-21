@@ -1,14 +1,16 @@
-// import data from '../mock/data.json';
+
 import {useSelector, useDispatch} from 'react-redux';
 import { JobPosition } from './JobPosition';
-import {selectAllCard} from '../store/cards/cards-selectors'
+import { selectVisibleCards} from '../store/cards/cards-selectors'
+import {selectFilters} from 'store/filters/filters-selectors'
 
 import {addFilter} from '../store/filters/filters-actions'
 
 const JobList = () => {
 
   const dispatch = useDispatch();
-  const cards = useSelector(selectAllCard);
+  const currentFilters = useSelector(selectFilters);
+  const cards = useSelector((state) => selectVisibleCards(state, currentFilters));
 
   const handleAddFilter = (filter)=> {
     dispatch (addFilter(filter));

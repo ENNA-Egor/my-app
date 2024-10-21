@@ -23,7 +23,9 @@ const FilterPanel = () => {
           {curentFilter.map(filter=> (
           <Badge
            key = {filter}
-           variant="clearable">
+           variant="clearable"
+           onClear={()=> dispatch(removeFilter(filter))}
+           >
             {filter}
            </Badge>
           ))}
