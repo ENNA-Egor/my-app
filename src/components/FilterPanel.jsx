@@ -4,10 +4,12 @@ import { Badge } from 'UI/Badge';
 import { Card } from 'UI/Card';
 import { Stack } from 'UI/Stack';
 
-import {selectFilters} from '../store/filters/filters-selectors'
+import {selectFilters} from '../store/filters/filters-selectors';
+import {clearFilter, removeFilter} from '../store/filters/filters-actions';
 
 
 const FilterPanel = () => {
+  const dispatch = useDispatch();
   const curentFilter = useSelector(selectFilters);
 
   if (curentFilter.length === 0){
@@ -27,7 +29,9 @@ const FilterPanel = () => {
           ))}
         </Stack>
 
-        <button className='link'>Clear</button>
+        <button className='link'
+        onClick={()=> (dispatch(clearFilter))}
+        >Clear</button>
       </div>
     </Card>
   )
