@@ -4,7 +4,7 @@ import {cardsReduser} from './cards/cards-reduser';
 import {filterReduser} from './filters/filters-reduser'
 
 
-export const rootReduser = combineReducers ({
+export const rootReducer = combineReducers ({
     cards: cardsReduser, 
     filters: filterReduser,
 }); 
